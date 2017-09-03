@@ -16,27 +16,24 @@
 
       if ($scope.numberOfDishes == 0) {
         $scope.ifTooMuchMessage = "Please enter data first"
-
-        $scope.msgStyle = {
-          'color': 'red',
-          'border': '2px solid red'
-        }
+        $scope.msgStyle = { 'color': 'red' };
+        $scope.boxStyle = { 'border': '2px solid red'};
 
         return;
       }
 
       if ($scope.numberOfDishes <= 3) {
         $scope.ifTooMuchMessage = 'Enjoy!';
-        $scope.msgStyle = {
-          'color': 'green',
-          'border': '2px solid green'
-        };
+
+        $scope.msgStyle = { 'color': 'green' };
+        $scope.boxStyle = { 'border': '2px solid green'};
+
       } else if ($scope.numberOfDishes > 3) {
-        $scope.ifTooMuchMessage = "Too much!"
-        $scope.msgStyle = {
-          'color': 'green',
-          'border': '2px solid green'
-        };
+        $scope.ifTooMuchMessage = "Too much!";
+
+        $scope.msgStyle = { 'color': 'green' };
+        $scope.boxStyle = { 'border': '2px solid green'};
+
       }
     };
   }
@@ -50,6 +47,7 @@
             listLength++;
         }
       });
+
     }
 
     return listLength;
