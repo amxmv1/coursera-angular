@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="MSGApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Hello AngularJS</title>
+  </head>
+  <body>
+    <h1>Expressions and Interpolation</h1>
+    <div ng-controller="MSGController">
+      {{name}} has a message: <br>
+      {{sayMessage();}}
+      <div>
+        <button ng-click="feed()">Feed</button>
+        <br>
+        {{stateOfBeing}}
+      </div>
+    </div>
+  </body>
+</html>
