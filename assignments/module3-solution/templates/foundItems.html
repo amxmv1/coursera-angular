@@ -1,0 +1,9 @@
+<div class="row item-row" ng-if="foundItems.length > 0">
+  <div class="col-xs-4"><strong>Name</strong></div>
+  <div class="col-xs-6"><strong>Description</strong></div>
+</div>
+<div class="row item-row" ng-repeat="item in foundItems">
+   <div class="col-xs-4"><strong>{{item.name}} ({{item.short_name}})</strong></div>
+   <div class="col-xs-6">{{item.description}}</div>
+   <button class="btn col-xs-2" ng-click="onRemove({index: $index});">Don't want this one!</button>
+</div>

@@ -1,0 +1,33 @@
+<div class="container" ng-controller="InfoController as info">
+  <h1 ng-if="!info.signed">
+    Not Signed Up Yet. Sign up Now!
+  </h1>
+
+  <div ng-if="info.signed">
+    <h1>Your Info</h1>
+    <br>
+    <div>
+      <b>First Name:</b> {{ info.firstName }}
+    </div>
+    <br>
+    <div>
+      <b>Last Name:</b> {{ info.lastName }}
+    </div>
+    <br>
+    <div>
+      <b>Phone:</b> {{ info.phone }}
+    </div>
+    <br>
+    <div>
+      <b>E-mail:</b> {{ info.email }}
+    </div>
+    <br>
+    <div>
+      <b>Favorite dish:</b> <br>
+      <img class="img-responsive" width="250" height="150" ng-src="{{info.dishImageUrl}}" alt="{{info.dishName}}">
+      <br>
+      {{info.dishName}} <br>
+      {{info.dishDescription}}
+    </div>
+  </div>
+</div>
